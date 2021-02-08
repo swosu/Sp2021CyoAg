@@ -32,7 +32,7 @@ public class Cs1At9CyoAg {
 		case 1: System.out.println("You call out to the guard. The gaurd comes..."); break;
 		case 2: System.out.println("You listen and play along. They spring the escape.");
 		System.out.println("They use you as a shield from the blast...");break;
-		default: System.out.println("Poof! You are a super potato.");break;
+		default: System.out.println("Poof! You are a potato.");break;
 		} break;
 		
 		default: System.out.println("Poof! You are a potato.");
