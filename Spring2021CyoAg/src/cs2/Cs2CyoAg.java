@@ -1,5 +1,7 @@
 package cs2;
 
+//https://docs.oracle.com/javase/tutorial/uiswing/components/dialog.html
+
 public class Cs2CyoAg {
 
 	public static void main(String[] args) {
