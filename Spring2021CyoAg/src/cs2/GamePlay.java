@@ -45,4 +45,9 @@ public class GamePlay {
 		
 	}
 
+	public void fake() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
