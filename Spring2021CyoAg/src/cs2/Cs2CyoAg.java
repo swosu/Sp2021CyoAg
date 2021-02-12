@@ -21,7 +21,13 @@ public class Cs2CyoAg {
 		
 		info.explainProcess();
 		int n = 0;
+		int selectRoom = 0;
 		while(true) {
+			
+			selectRoom = info.selectRoom();
+			if(0 == selectRoom) {
+				info.blueRoom();
+			}
 			
 			n = info.keepPlaying();
 			
