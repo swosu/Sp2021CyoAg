@@ -22,8 +22,11 @@ public class Cs2CyoAg {
 		while(true) {
 			
 			selectRoom = info.selectRoom();
-			if(0 == selectRoom) {
-				info.blueRoom(player);
+			switch(selectRoom) {
+			case 0: info.blueRoom(player); break;
+			case 1: info.redRoom(player); break;
+			case 2: info.pinkRoom(player); break;
+			default:info.youAreAPotato();break;
 			}
 			
 			n = info.keepPlaying();

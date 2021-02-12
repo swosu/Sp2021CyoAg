@@ -5,25 +5,21 @@ import java.awt.Component;
 import javax.swing.JOptionPane;
 
 public class GamePlay {
+	Component frame = null;
 
 	public void greetPlayer() {
-		Component frame = null;
-		JOptionPane.showMessageDialog(frame, "Welcome to a choose your own adventure game.\nClick OK to continue.","Cs2CyoAg",JOptionPane.PLAIN_MESSAGE);
-
+		JOptionPane.showMessageDialog(
+				frame, "Welcome to a choose your own adventure game.\nClick OK to continue.","Cs2CyoAg",JOptionPane.PLAIN_MESSAGE);
 	}
 
 	public void explainProcess() {
-		Component frame = null;
-		JOptionPane.showMessageDialog(frame, "You are going to push buttons.\nClick OK to continue.","Cs2CyoAg",JOptionPane.PLAIN_MESSAGE);
-
+		JOptionPane.showMessageDialog(
+				frame, "You are going to push buttons.\nClick OK to continue.","Cs2CyoAg",JOptionPane.PLAIN_MESSAGE);
 	}
 
 	public void lastPopUp() {
-		Component frame = null;
 		JOptionPane.showMessageDialog(
 				frame, "So long and thanks for all the fish.\nClick OK to close.","Cs2CyoAg",JOptionPane.PLAIN_MESSAGE);
-
-
 	}
 
 	public int keepPlaying() {
@@ -73,6 +69,43 @@ public class GamePlay {
 			switch(blueChoice) {
 			case 0: blue.openTheBox(player); break;
 			case 1: blue.goDownHall(); break;
+			case 2: keepGoing = false; break; 
+			}
+		}
+		
+	}
+
+
+
+	public void redRoom(PlayerGear player) {
+		RedRoom red = new RedRoom();
+		boolean keepGoing = true;
+		while(keepGoing) {
+			int blueChoice = red.welcomeToRedRoom();
+			
+			switch(blueChoice) {
+			case 0: red.openTheBox(player); break;
+			case 1: red.goDownHall(); break;
+			case 2: keepGoing = false; break; 
+			}
+		}
+	}
+	
+	public void youAreAPotato() {
+		JOptionPane.showMessageDialog(
+				frame, "You are a potato.\nClick OK to continue.","Curtains of Shame",JOptionPane.PLAIN_MESSAGE);
+		
+	}
+
+	public void pinkRoom(PlayerGear player) {
+		PinkRoom pink = new PinkRoom();
+		boolean keepGoing = true;
+		while(keepGoing) {
+			int blueChoice = pink.welcomeToPinkRoom();
+			
+			switch(blueChoice) {
+			case 0: pink.openTheBox(player); break;
+			case 1: pink.goDownHall(); break;
 			case 2: keepGoing = false; break; 
 			}
 		}
