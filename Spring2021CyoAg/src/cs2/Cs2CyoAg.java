@@ -9,15 +9,12 @@ import javax.swing.JOptionPane;
 public class Cs2CyoAg {
 
 	public static void main(String[] args) {
-		System.out.println("Hello, World.");
-		
-		Component frame = null;
-		JOptionPane.showMessageDialog(frame, "Hello, World.\nClick OK to continue.","Cs2CyoAg",JOptionPane.PLAIN_MESSAGE);
 		
 		GamePlay info = new GamePlay();
 		
+		PlayerGear player = new PlayerGear();
+		
 		info.greetPlayer();
-		info.fake();
 		
 		info.explainProcess();
 		int n = 0;
@@ -26,7 +23,7 @@ public class Cs2CyoAg {
 			
 			selectRoom = info.selectRoom();
 			if(0 == selectRoom) {
-				info.blueRoom();
+				info.blueRoom(player);
 			}
 			
 			n = info.keepPlaying();

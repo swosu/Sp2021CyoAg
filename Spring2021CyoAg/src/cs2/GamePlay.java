@@ -63,13 +63,19 @@ public class GamePlay {
 		return n;
 	}
 
-	public void blueRoom() {
-		// TODO Auto-generated method stub
+	public void blueRoom(PlayerGear player) {
+		BlueRoorm blue = new BlueRoorm();
 		
-	}
-
-	public void fake() {
-		// TODO Auto-generated method stub
+		boolean keepGoing = true;
+		while(keepGoing) {
+			int blueChoice = blue.welcomeToBlueRoom();
+			
+			switch(blueChoice) {
+			case 0: blue.openTheBox(player); break;
+			case 1: blue.goDownHall(); break;
+			case 2: keepGoing = false; break; 
+			}
+		}
 		
 	}
 
