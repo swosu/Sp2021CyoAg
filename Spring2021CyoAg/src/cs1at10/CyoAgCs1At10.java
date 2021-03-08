@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class CyoAgCs1At10 {
 
 	public static void main(String[] args) {
+
 		System.out.println("You wake up under a tree. (Yeah! Rested.)");
 		System.out.println("You are at the foot of a rainbow.");
 		System.out.println("You also see a magnifying glass and a small city.");
@@ -56,6 +57,7 @@ public class CyoAgCs1At10 {
 		}
 
 		System.out.println("Thank you for playing.");
+
 	}
 
 }
